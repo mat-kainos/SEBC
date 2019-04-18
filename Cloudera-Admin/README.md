@@ -2,7 +2,7 @@
 # Cloudera certification preparation
 
 This section will focus on trying to give you all you need to pass the Cloudera Admin (CCA131) certification. 
-The training materials below exist to help further your studies after taking the [Cloudera Admin training course](/https://university.cloudera.com/instructor-led-training/administrator). Currently there is a gap between what the course covers and what is required to pass the certification. For more details on the current training gaps please see this [page](/Cloudera-Admin/Training-Gaps.md) and concentrate on any gaps it may hightlight.
+The training materials below exist to help further your studies after taking the [Cloudera Admin training course](https://university.cloudera.com/instructor-led-training/administrator). Currently there is a gap between what the course covers and what is required to pass the certification. For more details on the current training gaps please see this [page](/Cloudera-Admin/Training-Gaps.md) and concentrate on any gaps it may hightlight.
 
 The details of the certification are available here.
 https://www.cloudera.com/more/training/certification/cca-admin.html
