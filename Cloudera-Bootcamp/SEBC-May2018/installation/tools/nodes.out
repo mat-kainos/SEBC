@@ -1,0 +1,931 @@
+### OS INFO
+//--- uname -a
+
+//--- cat /etc/redhat-release
+
+### NETWORK
+//--- dmesg | egrep NIC
+
+//--- egrep HOSTNAME /etc/sysconfig/network
+
+//--- cat /etc/sysconfig/network-scripts/ifcfg-eth* | egrep "^DEVICE|BOOTPROTO|ONBOOT|NETMASK|NETWORK|IPADDR|PEERDNS"
+
+### DISK INFO
+//--- lsblk
+
+//--- egrep "^/dev/*" /proc/mounts
+
+//--- df -h
+
+### CPU INFO
+//--- nproc
+
+//--- egrep "^model name\s+:" /proc/cpuinfo
+
+### MEM INFO
+//--- egrep "^MemTotal|SwapTotal|HugePages_Total" /proc/meminfo
+
+### SELINUX CHECK
+//--- egrep "^SELINUX" /etc/sysconfig/selinux
+
+### SSHD SERVICE
+//--- chkconfig --list sshd
+
+### USER LIMITS
+//--- egrep "^[^# ].+" /etc/security/limits.conf
+
+### NTP SERVICE
+//--- service ntpd status
+
+//--- chkconfig --list ntpd
+
+//--- date
+
+//--- ntpq -p
+
+## FIREWALL SERVICE
+//--- service iptables status
+
+//--- chkconfig --list iptables
+
+//--- service ip6tables status
+
+//--- chkconfig --list ip6tables
+
+### NSSWITCH & HOST.CONF
+//--- egrep "^hosts:" /etc/nsswitch.conf
+
+//--- cat /etc/host.conf
+
+//--- getent hosts
+
+### DNS CACHE
+//--- service nscd status
+
+//--- chkconfig --list ncsd
+
+### SWAPPINESS
+//--- cat /proc/sys/vm/swappiness
+
+### IPV4 TCP
+//--- sysctl -a | egrep "net.ipv4.tcp_"
+
+### OS INFO
+//--- uname -a
+
+//--- cat /etc/redhat-release
+
+### NETWORK
+//--- dmesg | egrep NIC
+
+//--- egrep HOSTNAME /etc/sysconfig/network
+
+//--- cat /etc/sysconfig/network-scripts/ifcfg-eth* | egrep "^DEVICE|BOOTPROTO|ONBOOT|NETMASK|NETWORK|IPADDR|PEERDNS"
+
+### DISK INFO
+//--- lsblk
+
+//--- egrep "^/dev/*" /proc/mounts
+
+//--- df -h
+
+### CPU INFO
+//--- nproc
+
+//--- egrep "^model name\s+:" /proc/cpuinfo
+
+### MEM INFO
+//--- egrep "^MemTotal|SwapTotal|HugePages_Total" /proc/meminfo
+
+### SELINUX CHECK
+//--- egrep "^SELINUX" /etc/sysconfig/selinux
+
+### SSHD SERVICE
+//--- chkconfig --list sshd
+
+### USER LIMITS
+//--- egrep "^[^# ].+" /etc/security/limits.conf
+
+### NTP SERVICE
+//--- service ntpd status
+
+//--- chkconfig --list ntpd
+
+//--- date
+
+//--- ntpq -p
+
+## FIREWALL SERVICE
+//--- service iptables status
+
+//--- chkconfig --list iptables
+
+//--- service ip6tables status
+
+//--- chkconfig --list ip6tables
+
+### NSSWITCH & HOST.CONF
+//--- egrep "^hosts:" /etc/nsswitch.conf
+
+//--- cat /etc/host.conf
+
+//--- getent hosts
+
+### DNS CACHE
+//--- service nscd status
+
+//--- chkconfig --list ncsd
+
+### SWAPPINESS
+//--- cat /proc/sys/vm/swappiness
+
+### IPV4 TCP
+//--- sysctl -a | egrep "net.ipv4.tcp_"
+
+### OS INFO
+//--- uname -a
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+Linux ip-172-30-1-93.ap-southeast-1.compute.internal 3.10.0-862.el7.x86_64 #1 SMP Wed Mar 21 18:14:51 EDT 2018 x86_64 x86_64 x86_64 GNU/Linux
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+Linux hadoop2.expecc.com 3.10.0-862.el7.x86_64 #1 SMP Wed Mar 21 18:14:51 EDT 2018 x86_64 x86_64 x86_64 GNU/Linux
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+Linux hadoop3.expecc.com 3.10.0-862.el7.x86_64 #1 SMP Wed Mar 21 18:14:51 EDT 2018 x86_64 x86_64 x86_64 GNU/Linux
+
+//--- cat /etc/redhat-release
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+Red Hat Enterprise Linux Server release 7.5 (Maipo)
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+Red Hat Enterprise Linux Server release 7.5 (Maipo)
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+Red Hat Enterprise Linux Server release 7.5 (Maipo)
+
+### NETWORK
+//--- dmesg | egrep NIC
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+[    0.000000] Netfront and the Xen platform PCI driver have been compiled for this kernel: unplug emulated NICs.
+[    5.859853] ixgbevf 0000:00:03.0: NIC Link is Up 10 Gbps
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+[    0.000000] Netfront and the Xen platform PCI driver have been compiled for this kernel: unplug emulated NICs.
+[    5.555998] ixgbevf 0000:00:03.0: NIC Link is Up 10 Gbps
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+[    0.000000] Netfront and the Xen platform PCI driver have been compiled for this kernel: unplug emulated NICs.
+[    4.910794] ixgbevf 0000:00:03.0: NIC Link is Up 10 Gbps
+
+//--- egrep HOSTNAME /etc/sysconfig/network
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+
+//--- cat /etc/sysconfig/network-scripts/ifcfg-eth* | egrep "^DEVICE|BOOTPROTO|ONBOOT|NETMASK|NETWORK|IPADDR|PEERDNS"
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+BOOTPROTO=dhcp
+DEVICE=eth0
+ONBOOT=yes
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+BOOTPROTO=dhcp
+DEVICE=eth0
+ONBOOT=yes
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+BOOTPROTO=dhcp
+DEVICE=eth0
+ONBOOT=yes
+
+### DISK INFO
+//--- lsblk
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+NAME    MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
+xvda    202:0    0  30G  0 disk 
+|-xvda1 202:1    0   1M  0 part 
+`-xvda2 202:2    0  30G  0 part /
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+NAME    MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
+xvda    202:0    0  30G  0 disk 
+|-xvda1 202:1    0   1M  0 part 
+`-xvda2 202:2    0  30G  0 part /
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+NAME    MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
+xvda    202:0    0  30G  0 disk 
+|-xvda1 202:1    0   1M  0 part 
+`-xvda2 202:2    0  30G  0 part /
+
+//--- egrep "^/dev/*" /proc/mounts
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+/dev/xvda2 / xfs rw,seclabel,relatime,attr2,inode64,noquota 0 0
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+/dev/xvda2 / xfs rw,relatime,attr2,inode64,noquota 0 0
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+/dev/xvda2 / xfs rw,relatime,attr2,inode64,noquota 0 0
+
+//--- df -h
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda2       30G   11G   20G  35% /
+devtmpfs        7.8G     0  7.8G   0% /dev
+tmpfs           7.8G     0  7.8G   0% /dev/shm
+tmpfs           7.8G   17M  7.8G   1% /run
+tmpfs           7.8G     0  7.8G   0% /sys/fs/cgroup
+tmpfs           1.6G     0  1.6G   0% /run/user/1000
+tmpfs           1.6G     0  1.6G   0% /run/user/997
+tmpfs           1.6G     0  1.6G   0% /run/user/0
+cm_processes    7.8G     0  7.8G   0% /run/cloudera-scm-agent/process
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda2       30G  8.0G   23G  27% /
+devtmpfs        7.8G     0  7.8G   0% /dev
+tmpfs           7.8G     0  7.8G   0% /dev/shm
+tmpfs           7.8G   17M  7.8G   1% /run
+tmpfs           7.8G     0  7.8G   0% /sys/fs/cgroup
+tmpfs           1.6G     0  1.6G   0% /run/user/0
+cm_processes    7.8G     0  7.8G   0% /run/cloudera-scm-agent/process
+tmpfs           1.6G     0  1.6G   0% /run/user/1000
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/xvda2       30G  8.0G   23G  27% /
+devtmpfs        7.8G     0  7.8G   0% /dev
+tmpfs           7.8G     0  7.8G   0% /dev/shm
+tmpfs           7.8G   17M  7.8G   1% /run
+tmpfs           7.8G     0  7.8G   0% /sys/fs/cgroup
+tmpfs           1.6G     0  1.6G   0% /run/user/0
+cm_processes    7.8G     0  7.8G   0% /run/cloudera-scm-agent/process
+tmpfs           1.6G     0  1.6G   0% /run/user/1000
+
+### CPU INFO
+//--- nproc
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+4
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+4
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+4
+
+//--- egrep "^model name\s+:" /proc/cpuinfo
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+model name	: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+model name	: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+model name	: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+model name	: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+model name	: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+model name	: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+model name	: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+model name	: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+model name	: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+model name	: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+model name	: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+model name	: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+
+### MEM INFO
+//--- egrep "^MemTotal|SwapTotal|HugePages_Total" /proc/meminfo
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+MemTotal:       16265888 kB
+SwapTotal:             0 kB
+HugePages_Total:       0
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+MemTotal:       16265888 kB
+SwapTotal:             0 kB
+HugePages_Total:       0
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+MemTotal:       16265884 kB
+SwapTotal:             0 kB
+HugePages_Total:       0
+
+### SELINUX CHECK
+//--- egrep "^SELINUX" /etc/sysconfig/selinux
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+SELINUX=disabled
+SELINUXTYPE=targeted
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+SELINUX=disabled
+SELINUXTYPE=targeted
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+SELINUX=disabled
+SELINUXTYPE=targeted
+
+### SSHD SERVICE
+//--- chkconfig --list sshd
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+error reading information on service sshd: No such file or directory
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+error reading information on service sshd: No such file or directory
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+error reading information on service sshd: No such file or directory
+
+### USER LIMITS
+//--- egrep "^[^# ].+" /etc/security/limits.conf
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+
+### NTP SERVICE
+//--- service ntpd status
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+Redirecting to /bin/systemctl status ntpd.service
+[1;32m●[0m ntpd.service - Network Time Service
+   Loaded: loaded (/usr/lib/systemd/system/ntpd.service; enabled; vendor preset: disabled)
+   Active: [1;32mactive (running)[0m since Tue 2018-05-15 13:06:09 UTC; 1h 0min ago
+ Main PID: 17685 (ntpd)
+   CGroup: /system.slice/ntpd.service
+           └─17685 /usr/sbin/ntpd -u ntp:ntp -g
+
+May 15 13:06:09 ip-172-30-1-93.ap-southeast-1.compute.internal ntpd[17685]: Listen normally on 5 eth0 fe80::4f8:d8ff:fed9:2582 UDP 123
+May 15 13:06:09 ip-172-30-1-93.ap-southeast-1.compute.internal ntpd[17685]: Listening on routing socket on fd #22 for interface updates
+May 15 13:06:09 ip-172-30-1-93.ap-southeast-1.compute.internal ntpd[17685]: 0.0.0.0 c016 06 restart
+May 15 13:06:09 ip-172-30-1-93.ap-southeast-1.compute.internal ntpd[17685]: 0.0.0.0 c012 02 freq_set kernel 0.000 PPM
+May 15 13:06:09 ip-172-30-1-93.ap-southeast-1.compute.internal ntpd[17685]: 0.0.0.0 c011 01 freq_not_set
+May 15 13:06:16 ip-172-30-1-93.ap-southeast-1.compute.internal ntpd[17685]: 0.0.0.0 c61c 0c clock_step -0.134954 s
+May 15 13:06:16 ip-172-30-1-93.ap-southeast-1.compute.internal ntpd[17685]: 0.0.0.0 c614 04 freq_mode
+May 15 13:06:17 ip-172-30-1-93.ap-southeast-1.compute.internal ntpd[17685]: 0.0.0.0 c618 08 no_sys_peer
+May 15 13:21:59 ip-172-30-1-93.ap-southeast-1.compute.internal ntpd[17685]: 0.0.0.0 c612 02 freq_set kernel 132.787 PPM
+May 15 13:21:59 ip-172-30-1-93.ap-southeast-1.compute.internal ntpd[17685]: 0.0.0.0 c615 05 clock_sync
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+Redirecting to /bin/systemctl status ntpd.service
+● ntpd.service - Network Time Service
+   Loaded: loaded (/usr/lib/systemd/system/ntpd.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+Redirecting to /bin/systemctl status ntpd.service
+● ntpd.service - Network Time Service
+   Loaded: loaded (/usr/lib/systemd/system/ntpd.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)
+
+//--- chkconfig --list ntpd
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+error reading information on service ntpd: No such file or directory
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+error reading information on service ntpd: No such file or directory
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+error reading information on service ntpd: No such file or directory
+
+//--- date
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+Tue May 15 14:06:21 UTC 2018
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+Tue May 15 14:06:23 UTC 2018
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+Tue May 15 14:06:23 UTC 2018
+
+//--- ntpq -p
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+     remote           refid      st t when poll reach   delay   offset  jitter
+==============================================================================
+-ntpmon.dcs1.biz 118.143.17.82    2 u    3  128  377    5.446  -188.87  30.224
++cartwheel.spide 164.67.62.194    2 u    6  128  177  219.397  -70.295  15.966
++pontoon.latt.ne 253.235.63.48    3 u  123  128  377    1.248  -60.493  17.853
+*210.23.25.77    .GPS.            1 u   31   64  375    1.849  -37.548   4.201
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+ntpq: read: Connection refused
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+ntpq: read: Connection refused
+
+## FIREWALL SERVICE
+//--- service iptables status
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+Redirecting to /bin/systemctl status iptables.service
+Unit iptables.service could not be found.
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+Redirecting to /bin/systemctl status iptables.service
+Unit iptables.service could not be found.
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+Redirecting to /bin/systemctl status iptables.service
+Unit iptables.service could not be found.
+
+//--- chkconfig --list iptables
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+error reading information on service iptables: No such file or directory
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+error reading information on service iptables: No such file or directory
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+error reading information on service iptables: No such file or directory
+
+//--- service ip6tables status
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+Redirecting to /bin/systemctl status ip6tables.service
+Unit ip6tables.service could not be found.
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+Redirecting to /bin/systemctl status ip6tables.service
+Unit ip6tables.service could not be found.
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+Redirecting to /bin/systemctl status ip6tables.service
+Unit ip6tables.service could not be found.
+
+//--- chkconfig --list ip6tables
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+error reading information on service ip6tables: No such file or directory
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+error reading information on service ip6tables: No such file or directory
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+error reading information on service ip6tables: No such file or directory
+
+### NSSWITCH & HOST.CONF
+//--- egrep "^hosts:" /etc/nsswitch.conf
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+hosts:      files dns myhostname
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+hosts:      files dns myhostname
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+hosts:      files dns myhostname
+
+//--- cat /etc/host.conf
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+multi on
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+multi on
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+multi on
+
+//--- getent hosts
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+127.0.0.1       localhost localhost.localdomain localhost4 localhost4.localdomain4
+127.0.0.1       localhost localhost.localdomain localhost6 localhost6.localdomain6
+172.30.1.125    hadoop0.expecc.com hadoop0
+172.30.1.93     hadoop1.expecc.com hadoop1
+172.30.1.218    hadoop2.expecc.com hadoop2
+172.30.1.214    hadoop3.expecc.com hadoop3
+172.30.1.59     hadoop4.expecc.com hadoop4
+172.30.1.187    hadoop5.expecc.com hadoop5
+172.30.1.33     hadoop6.expecc.com hadoop6
+172.30.1.74     hadoop7.expecc.com hadoop7
+172.30.1.51     hadoop8.expecc.com hadoop8
+172.30.1.252    hadoop9.expecc.com hadoop9
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+127.0.0.1       localhost localhost.localdomain localhost4 localhost4.localdomain4
+127.0.0.1       localhost localhost.localdomain localhost6 localhost6.localdomain6
+172.30.1.125    hadoop0.expecc.com hadoop0
+172.30.1.93     hadoop1.expecc.com hadoop1
+172.30.1.218    hadoop2.expecc.com hadoop2
+172.30.1.214    hadoop3.expecc.com hadoop3
+172.30.1.59     hadoop4.expecc.com hadoop4
+172.30.1.187    hadoop5.expecc.com hadoop5
+172.30.1.33     hadoop6.expecc.com hadoop6
+172.30.1.74     hadoop7.expecc.com hadoop7
+172.30.1.51     hadoop8.expecc.com hadoop8
+172.30.1.252    hadoop9.expecc.com hadoop9
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+127.0.0.1       localhost localhost.localdomain localhost4 localhost4.localdomain4
+127.0.0.1       localhost localhost.localdomain localhost6 localhost6.localdomain6
+172.30.1.125    hadoop0.expecc.com hadoop0
+172.30.1.93     hadoop1.expecc.com hadoop1
+172.30.1.218    hadoop2.expecc.com hadoop2
+172.30.1.214    hadoop3.expecc.com hadoop3
+172.30.1.59     hadoop4.expecc.com hadoop4
+172.30.1.187    hadoop5.expecc.com hadoop5
+172.30.1.33     hadoop6.expecc.com hadoop6
+172.30.1.74     hadoop7.expecc.com hadoop7
+172.30.1.51     hadoop8.expecc.com hadoop8
+172.30.1.252    hadoop9.expecc.com hadoop9
+
+### DNS CACHE
+//--- service nscd status
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+Redirecting to /bin/systemctl status nscd.service
+[1;32m●[0m nscd.service - Name Service Cache Daemon
+   Loaded: loaded (/usr/lib/systemd/system/nscd.service; enabled; vendor preset: disabled)
+   Active: [1;32mactive (running)[0m since Tue 2018-05-15 13:06:09 UTC; 1h 0min ago
+ Main PID: 17694 (nscd)
+   CGroup: /system.slice/nscd.service
+           └─17694 /usr/sbin/nscd
+
+May 15 13:48:27 ip-172-30-1-93.ap-southeast-1.compute.internal nscd[17694]: [1;39m17694 monitored file `/etc/passwd` was moved into place, adding watch[0m
+May 15 13:48:27 ip-172-30-1-93.ap-southeast-1.compute.internal nscd[17694]: [1;39m17694 monitored file `/etc/group` was written to[0m
+May 15 13:48:27 ip-172-30-1-93.ap-southeast-1.compute.internal nscd[17694]: [1;39m17694 monitoring file `/etc/passwd` (57)[0m
+May 15 13:48:27 ip-172-30-1-93.ap-southeast-1.compute.internal nscd[17694]: [1;39m17694 monitoring directory `/etc` (2)[0m
+May 15 13:48:27 ip-172-30-1-93.ap-southeast-1.compute.internal nscd[17694]: [1;39m17694 monitoring file `/etc/group` (55)[0m
+May 15 13:48:27 ip-172-30-1-93.ap-southeast-1.compute.internal nscd[17694]: [1;39m17694 monitoring directory `/etc` (2)[0m
+May 15 13:48:27 ip-172-30-1-93.ap-southeast-1.compute.internal nscd[17694]: [1;39m17694 monitoring file `/etc/passwd` (57)[0m
+May 15 13:48:27 ip-172-30-1-93.ap-southeast-1.compute.internal nscd[17694]: [1;39m17694 monitoring directory `/etc` (2)[0m
+May 15 13:48:27 ip-172-30-1-93.ap-southeast-1.compute.internal nscd[17694]: [1;39m17694 monitoring file `/etc/group` (55)[0m
+May 15 13:48:27 ip-172-30-1-93.ap-southeast-1.compute.internal nscd[17694]: [1;39m17694 monitoring directory `/etc` (2)[0m
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+Redirecting to /bin/systemctl status nscd.service
+● nscd.service - Name Service Cache Daemon
+   Loaded: loaded (/usr/lib/systemd/system/nscd.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+Redirecting to /bin/systemctl status nscd.service
+● nscd.service - Name Service Cache Daemon
+   Loaded: loaded (/usr/lib/systemd/system/nscd.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)
+
+//--- chkconfig --list ncsd
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+error reading information on service ncsd: No such file or directory
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+error reading information on service ncsd: No such file or directory
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+error reading information on service ncsd: No such file or directory
+
+### SWAPPINESS
+//--- cat /proc/sys/vm/swappiness
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+30
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+1
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+1
+
+### IPV4 TCP
+//--- sysctl -a | egrep "net.ipv4.tcp_"
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+ip-172-30-1-93.ap-southeast-1.compute.internal
+net.ipv4.tcp_abort_on_overflow = 0
+net.ipv4.tcp_adv_win_scale = 1
+net.ipv4.tcp_allowed_congestion_control = cubic reno
+net.ipv4.tcp_app_win = 31
+net.ipv4.tcp_autocorking = 1
+net.ipv4.tcp_available_congestion_control = cubic reno
+net.ipv4.tcp_base_mss = 512
+net.ipv4.tcp_challenge_ack_limit = 1000
+net.ipv4.tcp_congestion_control = cubic
+net.ipv4.tcp_dsack = 1
+net.ipv4.tcp_early_retrans = 3
+net.ipv4.tcp_ecn = 2
+net.ipv4.tcp_fack = 1
+net.ipv4.tcp_fastopen = 0
+net.ipv4.tcp_fastopen_key = 00000000-00000000-00000000-00000000
+net.ipv4.tcp_fin_timeout = 60
+net.ipv4.tcp_frto = 2
+net.ipv4.tcp_invalid_ratelimit = 500
+net.ipv4.tcp_keepalive_intvl = 75
+net.ipv4.tcp_keepalive_probes = 9
+net.ipv4.tcp_keepalive_time = 7200
+net.ipv4.tcp_limit_output_bytes = 262144
+net.ipv4.tcp_low_latency = 0
+net.ipv4.tcp_max_orphans = 65536
+net.ipv4.tcp_max_ssthresh = 0
+net.ipv4.tcp_max_syn_backlog = 512
+net.ipv4.tcp_max_tw_buckets = 65536
+net.ipv4.tcp_mem = 378777	505036	757554
+net.ipv4.tcp_min_tso_segs = 2
+net.ipv4.tcp_moderate_rcvbuf = 1
+net.ipv4.tcp_mtu_probing = 0
+net.ipv4.tcp_no_metrics_save = 0
+net.ipv4.tcp_notsent_lowat = -1
+net.ipv4.tcp_orphan_retries = 0
+net.ipv4.tcp_reordering = 3
+net.ipv4.tcp_retrans_collapse = 1
+net.ipv4.tcp_retries1 = 3
+net.ipv4.tcp_retries2 = 15
+net.ipv4.tcp_rfc1337 = 0
+net.ipv4.tcp_rmem = 4096	87380	6291456
+net.ipv4.tcp_sack = 1
+net.ipv4.tcp_slow_start_after_idle = 1
+net.ipv4.tcp_stdurg = 0
+net.ipv4.tcp_syn_retries = 6
+net.ipv4.tcp_synack_retries = 5
+net.ipv4.tcp_syncookies = 1
+net.ipv4.tcp_thin_dupack = 0
+sysctl: net.ipv4.tcp_thin_linear_timeouts = 0
+reading key "net.ipv6.conf.all.stable_secret"net.ipv4.tcp_timestamps = 1
+
+net.ipv4.tcp_tso_win_divisor = 3
+net.ipv4.tcp_tw_recycle = 0
+net.ipv4.tcp_tw_reuse = 0
+net.ipv4.tcp_window_scaling = 1
+net.ipv4.tcp_wmem = 4096	16384	4194304
+net.ipv4.tcp_workaround_signed_windows = 0
+sysctl: reading key "net.ipv6.conf.default.stable_secret"
+sysctl: reading key "net.ipv6.conf.eth0.stable_secret"
+sysctl: reading key "net.ipv6.conf.lo.stable_secret"
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop2.expecc.com
+net.ipv4.tcp_abort_on_overflow = 0
+net.ipv4.tcp_adv_win_scale = 1
+net.ipv4.tcp_allowed_congestion_control = cubic reno
+net.ipv4.tcp_app_win = 31
+net.ipv4.tcp_autocorking = 1
+net.ipv4.tcp_available_congestion_control = cubic reno
+net.ipv4.tcp_base_mss = 512
+net.ipv4.tcp_challenge_ack_limit = 1000
+net.ipv4.tcp_congestion_control = cubic
+net.ipv4.tcp_dsack = 1
+net.ipv4.tcp_early_retrans = 3
+net.ipv4.tcp_ecn = 2
+net.ipv4.tcp_fack = 1
+net.ipv4.tcp_fastopen = 0
+net.ipv4.tcp_fastopen_key = 00000000-00000000-00000000-00000000
+net.ipv4.tcp_fin_timeout = 60
+net.ipv4.tcp_frto = 2
+net.ipv4.tcp_invalid_ratelimit = 500
+net.ipv4.tcp_keepalive_intvl = 75
+net.ipv4.tcp_keepalive_probes = 9
+net.ipv4.tcp_keepalive_time = 7200
+net.ipv4.tcp_limit_output_bytes = 262144
+net.ipv4.tcp_low_latency = 0
+net.ipv4.tcp_max_orphans = 65536
+net.ipv4.tcp_max_ssthresh = 0
+net.ipv4.tcp_max_syn_backlog = 512
+net.ipv4.tcp_max_tw_buckets = 65536
+net.ipv4.tcp_mem = 378777	505036	757554
+net.ipv4.tcp_min_tso_segs = 2
+net.ipv4.tcp_moderate_rcvbuf = 1
+net.ipv4.tcp_mtu_probing = 0
+net.ipv4.tcp_no_metrics_save = 0
+net.ipv4.tcp_notsent_lowat = -1
+net.ipv4.tcp_orphan_retries = 0
+net.ipv4.tcp_reordering = 3
+net.ipv4.tcp_retrans_collapse = 1
+net.ipv4.tcp_retries1 = 3
+net.ipv4.tcp_retries2 = 15
+net.ipv4.tcp_rfc1337 = 0
+net.ipv4.tcp_rmem = 4096	87380	6291456
+net.ipv4.tcp_sack = 1
+net.ipv4.tcp_slow_start_after_idle = 1
+net.ipv4.tcp_stdurg = 0
+net.ipv4.tcp_syn_retries = 6
+net.ipv4.tcp_synack_retries = 5
+net.ipv4.tcp_syncookies = 1
+net.ipv4.tcp_thin_dupack = 0
+sysctl: reading key "net.ipv6.conf.all.stable_secret"net.ipv4.tcp_thin_linear_timeouts = 0
+
+net.ipv4.tcp_timestamps = 1
+net.ipv4.tcp_tso_win_divisor = 3
+net.ipv4.tcp_tw_recycle = 0
+net.ipv4.tcp_tw_reuse = 0
+net.ipv4.tcp_window_scaling = 1
+net.ipv4.tcp_wmem = 4096	16384	4194304
+net.ipv4.tcp_workaround_signed_windows = 0
+sysctl: reading key "net.ipv6.conf.default.stable_secret"
+sysctl: reading key "net.ipv6.conf.eth0.stable_secret"
+sysctl: reading key "net.ipv6.conf.lo.stable_secret"
+/etc/profile.d/lang.sh: line 19: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+hadoop3.expecc.com
+net.ipv4.tcp_abort_on_overflow = 0
+net.ipv4.tcp_adv_win_scale = 1
+net.ipv4.tcp_allowed_congestion_control = cubic reno
+net.ipv4.tcp_app_win = 31
+net.ipv4.tcp_autocorking = 1
+net.ipv4.tcp_available_congestion_control = cubic reno
+net.ipv4.tcp_base_mss = 512
+net.ipv4.tcp_challenge_ack_limit = 1000
+net.ipv4.tcp_congestion_control = cubic
+net.ipv4.tcp_dsack = 1
+net.ipv4.tcp_early_retrans = 3
+net.ipv4.tcp_ecn = 2
+net.ipv4.tcp_fack = 1
+net.ipv4.tcp_fastopen = 0
+net.ipv4.tcp_fastopen_key = 00000000-00000000-00000000-00000000
+net.ipv4.tcp_fin_timeout = 60
+net.ipv4.tcp_frto = 2
+net.ipv4.tcp_invalid_ratelimit = 500
+net.ipv4.tcp_keepalive_intvl = 75
+net.ipv4.tcp_keepalive_probes = 9
+net.ipv4.tcp_keepalive_time = 7200
+net.ipv4.tcp_limit_output_bytes = 262144
+net.ipv4.tcp_low_latency = 0
+net.ipv4.tcp_max_orphans = 65536
+net.ipv4.tcp_max_ssthresh = 0
+net.ipv4.tcp_max_syn_backlog = 512
+net.ipv4.tcp_max_tw_buckets = 65536
+net.ipv4.tcp_mem = 378777	505036	757554
+net.ipv4.tcp_min_tso_segs = 2
+net.ipv4.tcp_moderate_rcvbuf = 1
+net.ipv4.tcp_mtu_probing = 0
+net.ipv4.tcp_no_metrics_save = 0
+net.ipv4.tcp_notsent_lowat = -1
+net.ipv4.tcp_orphan_retries = 0
+net.ipv4.tcp_reordering = 3
+net.ipv4.tcp_retrans_collapse = 1
+net.ipv4.tcp_retries1 = 3
+net.ipv4.tcp_retries2 = 15
+net.ipv4.tcp_rfc1337 = 0
+net.ipv4.tcp_rmem = 4096	87380	6291456
+net.ipv4.tcp_sack = 1
+net.ipv4.tcp_slow_start_after_idle = 1
+net.ipv4.tcp_stdurg = 0
+net.ipv4.tcp_syn_retries = 6
+net.ipv4.tcp_synack_retries = 5
+net.ipv4.tcp_syncookies = 1
+net.ipv4.tcp_thin_dupack = 0
+sysctl: reading key "net.ipv6.conf.all.stable_secret"net.ipv4.tcp_thin_linear_timeouts = 0
+
+net.ipv4.tcp_timestamps = 1
+net.ipv4.tcp_tso_win_divisor = 3
+net.ipv4.tcp_tw_recycle = 0
+net.ipv4.tcp_tw_reuse = 0
+net.ipv4.tcp_window_scaling = 1
+net.ipv4.tcp_wmem = 4096	16384	4194304
+net.ipv4.tcp_workaround_signed_windows = 0
+sysctl: reading key "net.ipv6.conf.default.stable_secret"
+sysctl: reading key "net.ipv6.conf.eth0.stable_secret"
+sysctl: reading key "net.ipv6.conf.lo.stable_secret"
+
