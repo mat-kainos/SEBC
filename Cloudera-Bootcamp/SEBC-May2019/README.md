@@ -1,5 +1,5 @@
-# <center>Services Enablement Boot Camp - October 19, 2018 - Madrid
-# <center> 
+# <center>Services Enablement Boot Camp BDA - May 20, 2019 - Gdansk
+# <center>
 
 This repository holds the course materials for Cloudera's Services
 Enablement Boot Camp and FCE's internal boot camp.
@@ -23,7 +23,7 @@ We will use GitHub's Issues feature to track your progress. For
 each section, we'll ask you to create one Issue and use it to log
 your progress. We will use GitHub Labels to mark the state of
 each lab (e.g., started, submitted, evaluated). Finally, we'll use
-GitHub's Milestones to categorize your lab and challenge work. 
+GitHub's Milestones to categorize your lab and challenge work.
 
 In a large class, it may take time for an instructor to assist you.
 If you have a lab problem, describe in your current Issue what the

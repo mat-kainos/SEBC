@@ -27,7 +27,7 @@ This last step synchronizes your git repo to GitHub. If you created files on Git
 Finally, you can push your course to GitHub:
 
 * `$ git add .`
-* `$ git commit -m "Pushing course materials for Madrid, October 2018 session"`
+* `$ git commit -m "Pushing course materials for Gdansk, May 2019 session"`
 * `$ git push -u upstream master`
 
 Browse your GitHub version to make sure things transferred.
@@ -36,6 +36,10 @@ Also, your instructors may update the course material to address
 typos or other errors. To keep things simple, we'll send you updates file(s). You're expected to copy over the file you have, add and commit the change, and all is good.
 
 **Do not** add new or changed files directly to your GitHub repository. Make the changes locally, then push them to your repository. This will avoid confusion over which repo is the most current. For our purposes, your GitHub repo should never be more current than your local one.
+
+* To access the relevant Bootcamp directory:
+  * `$ cd SEBC/Cloudera-Bootcamp/SEBC-May2019`
+
 
 ---
 
