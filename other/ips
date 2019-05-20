@@ -1,0 +1,27 @@
+ec2-34-242-37-49.eu-west-1.compute.amazonaws.com cm
+ec2-34-242-231-42.eu-west-1.compute.amazonaws.com dnode1
+ec2-34-247-34-103.eu-west-1.compute.amazonaws.com dnode2
+ec2-34-255-1-229.eu-west-1.compute.amazonaws.com dnode3
+ec2-52-48-227-247.eu-west-1.compute.amazonaws.com dnode4
+
+172.31.31.21 ip-172-31-31-21.eu-west-1.compute.internal cm
+172.31.31.233 ip-172-31-31-233.eu-west-1.compute.internal dnode1
+172.31.31.235 ip-172-31-31-235.eu-west-1.compute.internal dnode2
+172.31.31.49 ip-172-31-31-49.eu-west-1.compute.internal dnode3
+172.31.31.163 ip-172-31-31-163.eu-west-1.compute.internal dnode4
+
+
+setenforce 0
+
+echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf
+echo 'never' > /sys/kernel/mm/transparent_hugepage/defrag
+echo 'never' > /sys/kernel/mm/transparent_hugepage/enabled
+sysctl vm.swappiness=1
+
+
+
+hostnamectl set-hostname 
+
+
+
+5.14 versions cloudera

@@ -1,3 +1,6 @@
+**/.terraform/*
+*.tfstate*
+
 # OS X stuffs
 .DS_Store
 ._*
