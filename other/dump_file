@@ -25,3 +25,9 @@ hostnamectl set-hostname
 
 
 5.14 versions cloudera
+
+cd /tmp
+mkdir -p /usr/share/java/
+wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.47.tar.gz
+tar zxvf mysql-connector-java-5.1.47.tar.gz
+cp mysql-connector-java-5.1.47/mysql-connector-java-5.1.47-bin.jar /usr/share/java/mysql-connector-java.jar
