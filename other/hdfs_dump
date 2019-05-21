@@ -1,0 +1,61 @@
+[hdfs@ip-172-31-31-233 root]$ hadoop jar /opt/cloudera/parcels/CDH/jars/hadoop-examples.jar teragen 5242880 /mat-kainos
+19/05/21 09:49:19 INFO client.RMProxy: Connecting to ResourceManager at ip-172-31-31-235.eu-west-1.compute.internal/172.31.31.235:8032
+19/05/21 09:49:20 INFO terasort.TeraGen: Generating 5242880 using 2
+19/05/21 09:49:20 INFO mapreduce.JobSubmitter: number of splits:2
+19/05/21 09:49:20 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1558429842624_0001
+19/05/21 09:49:21 INFO impl.YarnClientImpl: Submitted application application_1558429842624_0001
+19/05/21 09:49:21 INFO mapreduce.Job: The url to track the job: http://ip-172-31-31-235.eu-west-1.compute.internal:8088/proxy/application_1558429842624_0001/
+19/05/21 09:49:21 INFO mapreduce.Job: Running job: job_1558429842624_0001
+19/05/21 09:49:27 INFO mapreduce.Job: Job job_1558429842624_0001 running in uber mode : false
+19/05/21 09:49:27 INFO mapreduce.Job:  map 0% reduce 0%
+19/05/21 09:49:37 INFO mapreduce.Job:  map 50% reduce 0%
+19/05/21 09:49:38 INFO mapreduce.Job:  map 100% reduce 0%
+19/05/21 09:49:38 INFO mapreduce.Job: Job job_1558429842624_0001 completed successfully
+19/05/21 09:49:38 INFO mapreduce.Job: Counters: 31
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=298950
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=167
+		HDFS: Number of bytes written=524288000
+		HDFS: Number of read operations=8
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=4
+	Job Counters
+		Launched map tasks=2
+		Other local map tasks=2
+		Total time spent by all maps in occupied slots (ms)=14914
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=14914
+		Total vcore-milliseconds taken by all map tasks=14914
+		Total megabyte-milliseconds taken by all map tasks=15271936
+	Map-Reduce Framework
+		Map input records=5242880
+		Map output records=5242880
+		Input split bytes=167
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=238
+		CPU time spent (ms)=10750
+		Physical memory (bytes) snapshot=751296512
+		Virtual memory (bytes) snapshot=3158024192
+		Total committed heap usage (bytes)=862453760
+	org.apache.hadoop.examples.terasort.TeraGen$Counters
+		CHECKSUM=11257830824958050
+	File Input Format Counters
+		Bytes Read=0
+	File Output Format Counters
+		Bytes Written=524288000
+
+
+
+
+
+[hdfs@ip-172-31-31-233 root]$ hdfs dfs -ls /mat-kainos
+Found 3 items
+-rw-r--r--   3 hdfs supergroup          0 2019-05-21 09:49 /mat-kainos/_SUCCESS
+-rw-r--r--   3 hdfs supergroup  262144000 2019-05-21 09:49 /mat-kainos/part-m-00000
+-rw-r--r--   3 hdfs supergroup  262144000 2019-05-21 09:49 /mat-kainos/part-m-00001
