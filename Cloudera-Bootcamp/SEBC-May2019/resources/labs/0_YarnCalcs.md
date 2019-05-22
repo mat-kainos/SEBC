@@ -25,4 +25,16 @@ Conclusion: The formula for calculating OS memory always uses 10% of the total m
 
 # Workload factor
 
-By modyfing the number we can increase/decrease the default number of map tasks per job and default number of reduce tasks per job. The output is proportional to the workload factor and it depends on mapreduce.map.memory.mb and mapreduce.map.cpu.vcores.
+By modyfing the number we can increase/decrease the default number of map tasks per job and default number of reduce tasks per job. The output depends on mapreduce.map.memory.mb and mapreduce.map.cpu.vcores.
+These are the possible combinations:
+
+~~~
+            	    -D mapreduce.job.maps &
+Workload factor	     mapreduce.job.reduces
+	0		            	0
+	1			            10
+	2			            15
+	3		            	15
+	4		            	15
+   ...			            15
+~~~
