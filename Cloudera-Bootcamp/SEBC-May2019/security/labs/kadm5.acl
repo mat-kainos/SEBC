@@ -1,0 +1,5 @@
+~~~
+[root@ip-172-31-31-21 ~]# cat /var/kerberos/krb5kdc/kadm5.acl
+*/admin@GDANSKBDA.COM *
+cloudera-scm@GDANSKBDA.COM
+~~~
