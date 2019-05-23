@@ -1,8 +1,8 @@
 # API version before the upgrade
 
-`curl -u <user>-kainos:Password.123 'http://localhost:7180/api/version'`
+`curl -u <user>:<pwd> 'http://localhost:7180/api/version'`
 ~~~
-v19
+v14
 ~~~
 
 # CM Version before the upgrade
@@ -17,7 +17,7 @@ v19
 }
 ~~~
 
-# CM users
+# CM users before the upgrade
 `curl -u <user>:<pwd> 'http://localhost:7180/api/v14/users'`
 ~~~
 {
@@ -34,7 +34,7 @@ v19
 }
 ~~~
 
-# DB used by CM
+# DB used by CM before the upgrade
 `curl -u <user>:<pwd> 'http://localhost:7180/api/v14/cm/scmDbInfo'`
 ~~~
 {
@@ -43,9 +43,17 @@ v19
 }
 ~~~
 
-TODO
 
-[centos@ip-172-31-31-21 ~]$ curl -u $a:$b 'http://localhost:7180/api/v14/cm/version'
+# API version after the upgrade
+`curl -u <user>:<pwd> 'http://localhost:7180/api/version'`
+~~~
+v19
+~~~
+
+
+# CM Version after the upgrade
+`curl -u <user>:<pwd> 'http://localhost:7180/api/v14/cm/version'`
+~~~
 {
   "version" : "5.15.2",
   "buildUser" : "jenkins",
@@ -53,21 +61,31 @@ TODO
   "gitHash" : "bb8bf45c81fd454610b53e4945ceb482361f7568",
   "snapshot" : false
 }
+~~~
 
-
-}[centos@ip-172-31-31-21 ~]$ curl -u $a:$b 'http://localhost:7180/api/v14/users'
+# CM users after the upgrade
+`curl -u <user>:<pwd> 'http://localhost:7180/api/v14/users'`
+~~~
 {
   "items" : [ {
     "name" : "admin",
     "roles" : [ "ROLE_LIMITED" ]
   }, {
-    "name" : "mat-kainos",
+    "name" : "<redacted>",
     "roles" : [ "ROLE_ADMIN" ]
   }, {
     "name" : "minotaur",
     "roles" : [ "ROLE_CONFIGURATOR" ]
   } ]
 }
+~~~
 
-[centos@ip-172-31-31-21 ~]$ curl -u $a:$b 'http://localhost:7180/api/version'
-v19
+# DB used by CM after the upgrae
+`curl -u <user>:<pwd> 'http://localhost:7180/api/v14/cm/scmDbInfo'`
+~~~
+{
+  "scmDbType" : "MYSQL",
+  "embeddedDbUsed" : false
+}
+~~~
+
